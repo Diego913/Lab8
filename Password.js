@@ -9,13 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             document.querySelector("#error").innerHTML = "The passwords entered don't match!"   
         }
+        else if(password1.length < 8)
+        {
+            document.querySelector("#error").innerHTML = "The passwords are not at least 8 characters long!"  
+        }
         else
         {
-            if(password1.length < 8)
-            {
-                document.querySelector("#error").innerHTML = "The passwords are not at least 8 characters long!"  
-            }
+            document.querySelector("#error").innerHTML = "" 
         }
+    
     })
 })
 
